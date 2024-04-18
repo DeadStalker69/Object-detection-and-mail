@@ -24,14 +24,14 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
 
-fromaddr = 'prabhatg3356@gmail.com'
-toaddr = 'prabhatg3356@gmail.com'
+fromaddr = 'enter from email address'
+toaddr = 'enter to email address(es) here'
 
 msg = MIMEMultipart()
 msg['From'] = fromaddr
 msg['To'] = toaddr
-msg['Subject'] = "Booth Violation"
-body = 'More than one person was found at the EVM voting booth. Attached is the image from the booth.'
+msg['Subject'] = "enter subject here"
+body = 'enter text here'
 msg.attach(MIMEText(body, 'plain'))
 
 filename = "Image.jpg"
@@ -40,7 +40,7 @@ part = MIMEBase('application', 'octet-stream')
 
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
-server.login(fromaddr, "lmyr sytc hpcv mpvd")
+server.login(fromaddr, "enter your app password")
 text = msg.as_string()
 
 model='efficientdet_lite0.tflite'
